@@ -1,0 +1,29 @@
+{
+    "name": "react-component",
+    "description": "react-component",
+    "version": "1.0.0",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "build": "rm -rf dist/ && npx prettier --write src/ && yarn run build:esm && yarn run build:cjs",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    },
+    "author": "Murf",
+    "devDependencies": {
+        "@types/node": "^20.4.7",
+        "@types/react": "^18.2.18",
+        "@types/react-dom": "^18.2.7",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.1.6"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
